@@ -1,16 +1,8 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Scroll-reveal: fade/slide in each `.reveal` element once it enters the viewport.
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('is-visible');
-      revealObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.15 });
-
-document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+// Scroll-reveal, powered by the AOS library (https://michalsnik.github.io/aos/)
+// instead of a hand-rolled IntersectionObserver.
+AOS.init({ duration: 600, once: true, offset: 80 });
 
 // Count-up stats in the hero, triggered once when scrolled into view.
 const statObserver = new IntersectionObserver((entries) => {
@@ -60,6 +52,21 @@ navMobileMenu.querySelectorAll('a').forEach((link) => {
     navMobileMenu.classList.remove('is-open');
     navToggle.setAttribute('aria-expanded', 'false');
   });
+});
+
+// Light/dark theme toggle, persisted in localStorage.
+const themeToggle = document.querySelector('.theme-toggle');
+
+themeToggle.addEventListener('click', () => {
+  const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+  if (isLight) {
+    document.documentElement.removeAttribute('data-theme');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light');
+  }
+  try {
+    localStorage.setItem('theme', isLight ? 'dark' : 'light');
+  } catch (e) {}
 });
 
 // FAQ accordion.
