@@ -12,15 +12,22 @@
 </head>
 <body>
 
+<div class="starfield" aria-hidden="true"></div>
+
 <header class="nav">
   <div class="nav-inner">
     <a href="#top" class="nav-logo">usama<span>.</span>dev</a>
     <nav class="nav-links">
       <a href="#frameworks">Frameworks</a>
       <a href="#skills">Skills</a>
+      <a href="#philosophy">Philosophy</a>
+      <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a href="mailto:usamasheikh833@gmail.com" class="btn btn-small">Email Me</a>
+    <div class="nav-actions">
+      <a href="resume.pdf" class="btn btn-ghost btn-small" download>Résumé</a>
+      <a href="mailto:usamasheikh833@gmail.com" class="btn btn-primary btn-small">Email Me</a>
+    </div>
   </div>
 </header>
 
@@ -28,20 +35,43 @@
 
   <section id="top" class="hero">
     <div class="hero-inner">
-      <p class="eyebrow">Senior Automation Engineer · 5+ Years</p>
-      <h1>Usama Ali Shaikh</h1>
-      <p class="hero-sub">
-        I build test automation frameworks — BDD kits for web, mobile, and API testing
-        that teams drop into a project and start writing scenarios against on day one.
-      </p>
-      <div class="hero-actions">
-        <a href="#frameworks" class="btn btn-primary">View Frameworks</a>
-        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+      <div class="hero-copy">
+        <p class="pill"><span class="pill-dot"></span> Open to automation &amp; QA conversations</p>
+        <h1>I build test<br>automation<br><span class="grad-text">frameworks that scale.</span></h1>
+        <p class="hero-sub">
+          Senior Automation Engineer with 5+ years designing BDD frameworks for web, mobile,
+          and API testing — kits teams can drop into a project and start writing scenarios
+          against on day one.
+        </p>
+        <div class="hero-actions">
+          <a href="#frameworks" class="btn btn-primary">View Frameworks</a>
+          <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+        </div>
+        <div class="stat-row">
+          <div class="stat"><span class="stat-num" data-count="5" data-suffix="+">0</span><span class="stat-label">Years Experience</span></div>
+          <div class="stat"><span class="stat-num" data-count="3">0</span><span class="stat-label">Automation Frameworks</span></div>
+          <div class="stat"><span class="stat-num" data-count="3">0</span><span class="stat-label">Platforms Covered</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="orbit-core"></div>
+        <div class="orbit-ring orbit-ring-1">
+          <div class="orbit-item" style="--i:0"><span>PW</span></div>
+          <div class="orbit-item" style="--i:1"><span>SE</span></div>
+          <div class="orbit-item" style="--i:2"><span>AP</span></div>
+          <div class="orbit-item" style="--i:3"><span>CU</span></div>
+        </div>
+        <div class="orbit-ring orbit-ring-2">
+          <div class="orbit-item" style="--i:0"><span>PY</span></div>
+          <div class="orbit-item" style="--i:1"><span>C#</span></div>
+          <div class="orbit-item" style="--i:2"><span>JV</span></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="frameworks" class="section">
+  <section id="frameworks" class="section reveal">
     <div class="section-inner">
       <p class="section-label">Featured Work</p>
       <h2>Automation Frameworks</h2>
@@ -49,24 +79,42 @@
 
       <div class="card-grid">
 
-        <article class="card">
+        <article class="card reveal">
+          <div class="card-top-accent" style="--accent-color: var(--accent-a)"></div>
           <div class="card-stack">Playwright · Gherkin</div>
           <h3>Playwright BDD Kit</h3>
           <p>Playwright + Gherkin BDD test-automation starter kit with governance rules, Claude Code scenario generation, and a Vansah importer.</p>
+          <ul class="check-list">
+            <li>Governance rules for scenario writing</li>
+            <li>AI-assisted scenario generation</li>
+            <li>Vansah test-management importer</li>
+          </ul>
           <a href="https://github.com/usamasshaikh165/playwright-bdd-kit" class="card-link" target="_blank" rel="noopener">View on GitHub →</a>
         </article>
 
-        <article class="card">
+        <article class="card reveal">
+          <div class="card-top-accent" style="--accent-color: var(--accent-b)"></div>
           <div class="card-stack">Selenium · SpecFlow · NUnit</div>
           <h3>Selenium SpecFlow BDD Kit</h3>
-          <p>Selenium + SpecFlow + NUnit BDD test-automation starter kit: JSON locator repository, Extent reports, governance rules, Claude Code scenario generation, Vansah importer.</p>
+          <p>Selenium + SpecFlow + NUnit BDD test-automation starter kit for teams standardizing on .NET.</p>
+          <ul class="check-list">
+            <li>JSON locator repository</li>
+            <li>Extent reports out of the box</li>
+            <li>Claude Code scenario generation</li>
+          </ul>
           <a href="https://github.com/usamasshaikh165/selenium-specflow-bdd-kit" class="card-link" target="_blank" rel="noopener">View on GitHub →</a>
         </article>
 
-        <article class="card">
+        <article class="card reveal">
+          <div class="card-top-accent" style="--accent-color: var(--accent-c)"></div>
           <div class="card-stack">Appium · Cucumber · TestNG</div>
           <h3>Appium Cucumber BDD Kit</h3>
-          <p>Appium + Cucumber + TestNG mobile BDD starter kit: JSON locator repository, generic step library, auto-scroll element finder, Extent reports, governance rules, Claude Code scenario generation.</p>
+          <p>Appium + Cucumber + TestNG mobile BDD starter kit for Android/iOS test suites.</p>
+          <ul class="check-list">
+            <li>Auto-scroll element finder</li>
+            <li>Generic, reusable step library</li>
+            <li>JSON locator repository + Extent reports</li>
+          </ul>
           <a href="https://github.com/usamasshaikh165/appium-cucumber-bdd-kit" class="card-link" target="_blank" rel="noopener">View on GitHub →</a>
         </article>
 
@@ -74,48 +122,133 @@
     </div>
   </section>
 
-  <section id="skills" class="section section-alt">
+  <section id="skills" class="section section-alt reveal">
     <div class="section-inner">
       <p class="section-label">Toolset</p>
       <h2>Skills &amp; Stack</h2>
+      <p class="section-sub">Tools I use across automation frameworks and delivery pipelines.</p>
 
       <div class="skill-groups">
 
-        <div class="skill-group">
+        <div class="skill-card reveal">
           <h3>Automation Tools</h3>
-          <ul class="skill-list">
-            <li><span>Playwright</span><span class="skill-level">Intermediate</span></li>
-            <li><span>Selenium</span><span class="skill-level">Intermediate</span></li>
-            <li><span>Appium</span><span class="skill-level">Intermediate</span></li>
-            <li><span>Cucumber / SpecFlow (BDD)</span><span class="skill-level">Intermediate</span></li>
-          </ul>
+          <p class="skill-card-sub">Where scenarios meet the browser or device.</p>
+          <div class="skill-bar-row">
+            <div class="skill-bar-head"><span>Playwright</span><span>Intermediate</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="65"></div></div>
+          </div>
+          <div class="skill-bar-row">
+            <div class="skill-bar-head"><span>Selenium</span><span>Intermediate</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="65"></div></div>
+          </div>
+          <div class="skill-bar-row">
+            <div class="skill-bar-head"><span>Appium</span><span>Intermediate</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="65"></div></div>
+          </div>
+          <div class="skill-bar-row">
+            <div class="skill-bar-head"><span>Cucumber / SpecFlow (BDD)</span><span>Intermediate</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="65"></div></div>
+          </div>
         </div>
 
-        <div class="skill-group">
+        <div class="skill-card reveal">
           <h3>Languages</h3>
-          <ul class="skill-list">
-            <li><span>Python</span><span class="skill-level">Intermediate</span></li>
-            <li><span>C#</span><span class="skill-level">Intermediate</span></li>
-            <li><span>Java</span><span class="skill-level">Intermediate</span></li>
-          </ul>
+          <p class="skill-card-sub">What the frameworks are written in.</p>
+          <div class="skill-bar-row">
+            <div class="skill-bar-head"><span>Python</span><span>Intermediate</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="65"></div></div>
+          </div>
+          <div class="skill-bar-row">
+            <div class="skill-bar-head"><span>C#</span><span>Intermediate</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="65"></div></div>
+          </div>
+          <div class="skill-bar-row">
+            <div class="skill-bar-head"><span>Java</span><span>Intermediate</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="65"></div></div>
+          </div>
         </div>
 
-        <div class="skill-group">
+        <div class="skill-card reveal">
           <h3>Delivery</h3>
-          <ul class="skill-list">
-            <li><span>CI/CD</span><span class="skill-level">Intermediate</span></li>
-            <li><span>Git</span><span class="skill-level">Intermediate</span></li>
-            <li><span>Test Reporting (Extent, Vansah)</span><span class="skill-level">Intermediate</span></li>
-          </ul>
+          <p class="skill-card-sub">Getting tests running in CI, not just on a laptop.</p>
+          <div class="skill-bar-row">
+            <div class="skill-bar-head"><span>CI/CD</span><span>Intermediate</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="65"></div></div>
+          </div>
+          <div class="skill-bar-row">
+            <div class="skill-bar-head"><span>Git</span><span>Intermediate</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="65"></div></div>
+          </div>
+          <div class="skill-bar-row">
+            <div class="skill-bar-head"><span>Test Reporting (Extent, Vansah)</span><span>Intermediate</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="65"></div></div>
+          </div>
         </div>
 
       </div>
     </div>
   </section>
 
-  <section id="contact" class="section contact">
+  <section id="philosophy" class="section reveal">
+    <div class="section-inner">
+      <p class="section-label">How I Work</p>
+      <h2>On test automation</h2>
+      <blockquote class="quote-card">
+        <p>“A framework isn't finished when the tests pass once — it's finished when the next
+        engineer can read a scenario, understand what it checks, and trust it enough to
+        never touch the step definitions.”</p>
+        <footer>
+          <div class="quote-avatar">US</div>
+          <div>
+            <div class="quote-name">Usama Ali Shaikh</div>
+            <div class="quote-role">Senior Automation Engineer</div>
+          </div>
+        </footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <section id="faq" class="section section-alt reveal">
+    <div class="section-inner">
+      <p class="section-label">FAQ</p>
+      <h2>About these frameworks</h2>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What's included in each BDD kit?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer"><p>A locator repository, a reusable step-definition library, built-in reporting (Extent / Vansah), governance rules for how scenarios should be written, and CI/CD wiring — so a team can start writing scenarios on day one instead of scaffolding a framework from scratch.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can I drop this into an existing project?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer"><p>Yes — each kit is designed as a starter/scaffold rather than a monolithic framework, so the locator repository and step library can be adapted into an existing suite incrementally.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Which platforms do these cover?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer"><p>Web (Playwright, and separately Selenium + SpecFlow for .NET teams), and mobile (Appium + Cucumber for Android/iOS).</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Do you build custom automation frameworks for teams?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer"><p>Open to conversations about test automation, QA process, and framework design — reach out via email or LinkedIn below.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact reveal">
     <div class="section-inner contact-inner">
-      <p class="section-label">Get in Touch</p>
+      <p class="pill pill-center"><span class="pill-dot"></span> Let's build something that runs itself</p>
       <h2>Let's talk automation</h2>
       <p class="section-sub">Open to conversations about test automation, QA process, and framework design.</p>
       <div class="contact-links">
@@ -129,12 +262,33 @@
 </main>
 
 <footer class="footer">
-  <p>&copy; <span id="year"></span> Usama Ali Shaikh</p>
+  <div class="footer-inner">
+    <div class="footer-col footer-brand">
+      <a href="#top" class="nav-logo">usama<span>.</span>dev</a>
+      <p>Senior Automation Engineer — building BDD test automation frameworks for web, mobile, and API.</p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-heading">Navigate</p>
+      <a href="#frameworks">Frameworks</a>
+      <a href="#skills">Skills</a>
+      <a href="#philosophy">Philosophy</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-heading">Connect</p>
+      <a href="mailto:usamasheikh833@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/usamaalishaikh/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/usamasshaikh165" target="_blank" rel="noopener">GitHub</a>
+      <a href="resume.pdf" download>Résumé</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> Usama Ali Shaikh</p>
+    <p class="footer-status"><span class="pill-dot"></span> Open to opportunities</p>
+  </div>
 </footer>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
