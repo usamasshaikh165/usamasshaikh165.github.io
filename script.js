@@ -46,6 +46,22 @@ const skillObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.skill-bar-fill').forEach((el) => skillObserver.observe(el));
 
+// Mobile nav toggle.
+const navToggle = document.querySelector('.nav-toggle');
+const navMobileMenu = document.querySelector('.nav-mobile-menu');
+
+navToggle.addEventListener('click', () => {
+  const isOpen = navMobileMenu.classList.toggle('is-open');
+  navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+});
+
+navMobileMenu.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', () => {
+    navMobileMenu.classList.remove('is-open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  });
+});
+
 // FAQ accordion.
 document.querySelectorAll('.faq-item').forEach((item) => {
   const question = item.querySelector('.faq-question');

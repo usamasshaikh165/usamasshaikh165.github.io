@@ -31,6 +31,11 @@ body {
 
 a { color: inherit; text-decoration: none; }
 
+/* Offset anchor-scroll targets so the sticky nav doesn't cover the section heading */
+section[id], #top {
+  scroll-margin-top: 88px;
+}
+
 /* Starfield background */
 .starfield {
   position: fixed;
@@ -109,8 +114,58 @@ main, .nav, .footer { position: relative; z-index: 1; }
 
 .nav-actions {
   display: flex;
+  align-items: center;
   gap: 10px;
 }
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 16px;
+  height: 2px;
+  margin: 0 auto;
+  background: var(--text);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.nav-mobile-menu {
+  display: none;
+  flex-direction: column;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+  border-top: 1px solid var(--border);
+}
+
+.nav-mobile-menu.is-open {
+  max-height: 300px;
+}
+
+.nav-mobile-menu a {
+  padding: 16px 24px;
+  font-size: 15px;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-mobile-menu a:hover { color: var(--text); }
 
 /* Buttons */
 .btn {
@@ -684,6 +739,8 @@ main, .nav, .footer { position: relative; z-index: 1; }
 
 @media (max-width: 800px) {
   .nav-links { display: none; }
+  .nav-toggle { display: flex; }
+  .nav-mobile-menu { display: flex; }
   .card-grid { grid-template-columns: 1fr; }
   .skill-groups { grid-template-columns: 1fr; gap: 20px; }
   .hero { padding: 90px 20px 60px; }
